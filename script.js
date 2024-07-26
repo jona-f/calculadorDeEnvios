@@ -14,9 +14,9 @@ function calculateShipping() {
         '5d': 2999     // Tarifa por unidad de volumen para 5 días
     };
 
-    // Validar que los valores sean positivos y mayores que cero
-    if (length <= 0 || width <= 0 || height <= 0 || weight <= 0) {
-        document.getElementById('result').innerText = 'Por favor, ingrese valores válidos y mayores que cero.';
+    // Validar que los valores sean positivos, mayores que cero y no pasen de 200 cm
+    if (length <= 0 || width <= 0 || height <= 0 || weight <= 0 || length > 200 || width > 200 || height > 200) {
+        document.getElementById('result').innerText = 'Por favor, ingrese valores válidos: mayores que cero y no mayores a 200 cm.';
         return;
     }
 
@@ -54,14 +54,56 @@ function calculateShipping() {
     document.getElementById('result').innerText = `El costo de envío es: $${cost.toFixed(2)}`;
 }
 
+// texto que se borra 
 
-// para el checkbox sobre otro paquete 
+// function([string1, string2],target id,[color1,color2])    
+consoleText(['CL Logistica', 'Tu Logistica de confianza','Rapida y Segura'], 'text', ['lightblue', 'black', 'lightblue']);
 
-document.getElementById('add-another-package').addEventListener('change', function() {
-    var additionalPackageInfo = document.getElementById('additional-package-info');
-    if (this.checked) {
-        additionalPackageInfo.style.display = 'block';
-    } else {
-        additionalPackageInfo.style.display = 'none';
-    }
-});
+function consoleText(words, id, colors) {
+    if (colors === undefined) colors = ['#fff'];
+    var visible = true;
+    var con = document.getElementById('console');
+    var letterCount = 1;
+    var x = 1;
+    var waiting = false;
+    var target = document.getElementById(id)
+    target.setAttribute('style', 'color:' + colors[0])
+    window.setInterval(function () {
+
+        if (letterCount === 0 && waiting === false) {
+            waiting = true;
+            target.innerHTML = words[0].substring(0, letterCount)
+            window.setTimeout(function () {
+                var usedColor = colors.shift();
+                colors.push(usedColor);
+                var usedWord = words.shift();
+                words.push(usedWord);
+                x = 1;
+                target.setAttribute('style', 'color:' + colors[0])
+                letterCount += x;
+                waiting = false;
+            }, 1000)
+        } else if (letterCount === words[0].length + 1 && waiting === false) {
+            waiting = true;
+            window.setTimeout(function () {
+                x = -1;
+                letterCount += x;
+                waiting = false;
+            }, 1000)
+        } else if (waiting === false) {
+            target.innerHTML = words[0].substring(0, letterCount)
+            letterCount += x;
+        }
+    }, 120)
+    window.setInterval(function () {
+        if (visible === true) {
+            con.className = 'console-underscore hidden'
+            visible = false;
+
+        } else {
+            con.className = 'console-underscore'
+
+            visible = true;
+        }
+    }, 400)
+}
