@@ -1,18 +1,66 @@
+/* Navbar */
+/* Estilos para la navbar */
+.navbar {
+    background-color: #f8f9fa; /* Color de fondo de la navbar */
+    padding: 0.5rem 1rem; /* Espaciado superior e inferior */
+}
+
+.navbar a {
+    font-family: Cambria;
+    font-size: 25px;
+}
+
+/* Ajustar el logo */
+.logo-img {
+    height: 90px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantener la proporción */
+}
+
+/* Centrar el contenido de la navbar */
+.navbar-nav {
+    margin: 0 auto; /* Centrando los elementos de navegación */
+}
+
+/* Ajustar el espaciado y alineación de los elementos de la navbar */
+.nav-item {
+    margin-left: 1rem; /* Espaciado entre los elementos de la navbar */
+    margin-right: 1rem; /* Espaciado entre los elementos de la navbar */
+}
+
+/* En pantallas pequeñas */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center; /* Centrar los elementos en pantallas pequeñas */
+    }
+
+    .nav-item {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+
+
 /* Estilo global */
-body {
+
+
+main {
     font-family: 'Arial', sans-serif;
     background-color: #f5f5f5;
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 /* Contenedor principal */
-.container {
+.calculador {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+
+.container1 {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -26,17 +74,56 @@ body {
 h1 {
     font-size: 28px;
     color: #333;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     font-weight: 600;
 }
 
 /* Sección del formulario */
 #shipping-section {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /* Etiquetas y campos del formulario */
+
+#shipping-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+
+.form-row {
+    display: flex;
+    gap: px; 
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1; 
+}
+
+.form-group label {
+    margin-bottom: 5px; 
+}
+
+/* Ajustar el tamaño de los campos de entrada */
+input[type="number"] {
+    width: 100%; /* Asegura que el campo de entrada ocupe todo el ancho disponible */
+    padding: 8px;
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Ajustar el tamaño de los botones y selectores */
+button, select {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
 label {
     display: block;
     font-size: 16px;
@@ -91,4 +178,62 @@ button:active {
     text-align: center;
     color: #27ae60;
     font-weight: bold;
+}
+
+
+/* General Footer Styles */
+.footer {
+    background-color: #232323;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h2 {
+    font-size: 35px;
+    font-family: Cambria;
+}
+
+.social-media {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    display: inline-block;
+    font-size: 45px;
+    margin: 3px;
+}
+
+.phone-number {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.phone-number:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .social-media {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-link {
+        margin-bottom: 0.5rem;
+    }
 }

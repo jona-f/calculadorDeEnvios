@@ -9,9 +9,9 @@ function calculateShipping() {
 
     // Definir tarifas por tipo de envío
     const deliveryRates = {
-        '24h': 4800,   // Tarifa por unidad de volumen para 24 horas
-        '72h': 3600,   // Tarifa por unidad de volumen para 72 horas
-        '5d': 3000     // Tarifa por unidad de volumen para 5 días
+        '24h': 4799,   // Tarifa por unidad de volumen para 24 horas
+        '72h': 3599,   // Tarifa por unidad de volumen para 72 horas
+        '5d': 2999     // Tarifa por unidad de volumen para 5 días
     };
 
     // Validar que los valores sean positivos y mayores que cero
@@ -53,3 +53,15 @@ function calculateShipping() {
     // Muestra el resultado
     document.getElementById('result').innerText = `El costo de envío es: $${cost.toFixed(2)}`;
 }
+
+
+// para el checkbox sobre otro paquete 
+
+document.getElementById('add-another-package').addEventListener('change', function() {
+    var additionalPackageInfo = document.getElementById('additional-package-info');
+    if (this.checked) {
+        additionalPackageInfo.style.display = 'block';
+    } else {
+        additionalPackageInfo.style.display = 'none';
+    }
+});

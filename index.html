@@ -1,32 +1,284 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Costo de Envío</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Costo de Envío Cl Logistica</title>
+    <link rel="stylesheet" href="style.css"> <!-- conectamos css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/6fa2f1a717.js" crossorigin="anonymous"></script> <!-- conectamos iconos -->
 </head>
+
 <body>
-    
+
     <header>
-        
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img class="logo-img" src="./img/logo.jpg" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Quienes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    
+
     <main>
-        
-        <div class="container">
-            <h1>Calculadora de Costo de Envío</h1>
+        <section class="sobrenosotros">
+
+            <div class="container">
+                    <h1>CL Logistica</h1>
+            </div>
+        </section>
+
+
+<section class="calculador">
+        <div class="container1">
+            <h1>Cotizador de Envios</h1>
             <section id="shipping-section">
                 <form id="shipping-form">
-                    <label for="length">Largo (cm):</label>
-                    <input type="number" id="length" name="length" required><br>
-                    
-                    <label for="width">Ancho (cm):</label>
-                    <input type="number" id="width" name="width" required><br>
-                    
-                    <label for="height">Altura (cm):</label>
-                    <input type="number" id="height" name="height" required><br>
-                    
+                    <label for="departure-location">Origen</label>
+                    <select id="departure-location" name="departure-location" required>
+                        <option value=""></option>
+                        <option value="ADROGUE">ADROGUE</option>
+                        <option value="ALDO BONZI">ALDO BONZI</option>
+                        <option value="ARTURO SEGUI">ARTURO SEGUI</option>
+                        <option value="AVELLANEDA">AVELLANEDA</option>
+                        <option value="BANFIELD">BANFIELD</option>
+                        <option value="BECCAR">BECCAR</option>
+                        <option value="BELLA VISTA">BELLA VISTA</option>
+                        <option value="BERAZATEGUI">BERAZATEGUI</option>
+                        <option value="BERNAL">BERNAL</option>
+                        <option value="BOSQUES">BOSQUES</option>
+                        <option value="BOULOGNE SUR MER">BOULOGNE SUR MER</option>
+                        <option value="BURZACO">BURZACO</option>
+                        <option value="CARAPACHAY">CARAPACHAY</option>
+                        <option value="CASCO URBANO">CASCO URBANO</option>
+                        <option value="CASEROS">CASEROS</option>
+                        <option value="CASTELAR">CASTELAR</option>
+                        <option value="CIUDAD EVITA">CIUDAD EVITA</option>
+                        <option value="CIUDADELA">CIUDADELA</option>
+                        <option value="CITY BELL">CITY BELL</option>
+                        <option value="CLAYPOLE">CLAYPOLE</option>
+                        <option value="CABA">CABA</option>
+                        <option value="DEL VISO">DEL VISO</option>
+                        <option value="DON BOSCO">DON BOSCO</option>
+                        <option value="DON ORIONE">DON ORIONE</option>
+                        <option value="DON TORCUATO">DON TORCUATO</option>
+                        <option value="EZPELETA">EZPELETA</option>
+                        <option value="FLORENCIO VARELA">FLORENCIO VARELA</option>
+                        <option value="FLORIDA">FLORIDA</option>
+                        <option value="GARIN">GARIN</option>
+                        <option value="GENERAL PACHECO">GENERAL PACHECO</option>
+                        <option value="GERLI">GERLI</option>
+                        <option value="GONNET">GONNET</option>
+                        <option value="GUTIERREZ">GUTIERREZ</option>
+                        <option value="HAEDO">HAEDO</option>
+                        <option value="HUDSON">HUDSON</option>
+                        <option value="HURLINGHAM">HURLINGHAM</option>
+                        <option value="ISIDRO CASANOVA">ISIDRO CASANOVA</option>
+                        <option value="ITUZANGO">ITUZANGO</option>
+                        <option value="JOSE INGENIEROS">JOSE INGENIEROS</option>
+                        <option value="JOSE MARMOL">JOSE MARMOL</option>
+                        <option value="LA LUCILA">LA LUCILA</option>
+                        <option value="LA TABLADA">LA TABLADA</option>
+                        <option value="LAFERRERE">LAFERRERE</option>
+                        <option value="LANUS">LANUS</option>
+                        <option value="LAVALLOL">LAVALLOL</option>
+                        <option value="LOMA HERMOSA">LOMA HERMOSA</option>
+                        <option value="LOMAS DEL MIRADOR">LOMAS DEL MIRADOR</option>
+                        <option value="LOMAS DE ZAMORA">LOMAS DE ZAMORA</option>
+                        <option value="LONGCHAMPS">LONGCHAMPS</option>
+                        <option value="LIBERTAD">LIBERTAD</option>
+                        <option value="LUIS GUILLON">LUIS GUILLON</option>
+                        <option value="MANUEL ALBERTI">MANUEL ALBERTI</option>
+                        <option value="MARTIN CORONADO">MARTIN CORONADO</option>
+                        <option value="MARTINEZ">MARTINEZ</option>
+                        <option value="MERLO">MERLO</option>
+                        <option value="MORENO">MORENO</option>
+                        <option value="MORON">MORON</option>
+                        <option value="MUNRO">MUNRO</option>
+                        <option value="PABLO PODESTA">PABLO PODESTA</option>
+                        <option value="PIÑEYRO">PIÑEYRO</option>
+                        <option value="PLATANOS">PLATANOS</option>
+                        <option value="RAFAEL CALZADA">RAFAEL CALZADA</option>
+                        <option value="RAFAEL CASTILLO">RAFAEL CASTILLO</option>
+                        <option value="RANELAGH">RANELAGH</option>
+                        <option value="RAMOS MEJIA">RAMOS MEJIA</option>
+                        <option value="REMEDIOS DE ESCALADA">REMEDIOS DE ESCALADA</option>
+                        <option value="RINCON DE MILBERG">RINCON DE MILBERG</option>
+                        <option value="SAN FERNANDO">SAN FERNANDO</option>
+                        <option value="SAN ISIDRO">SAN ISIDRO</option>
+                        <option value="SAN JOSE">SAN JOSE</option>
+                        <option value="SAN JUSTO">SAN JUSTO</option>
+                        <option value="SAN MARTIN">SAN MARTIN</option>
+                        <option value="SAN MIGUEL">SAN MIGUEL</option>
+                        <option value="SARANDI">SARANDI</option>
+                        <option value="SANTOS LUGARES">SANTOS LUGARES</option>
+                        <option value="SOLANO">SOLANO</option>
+                        <option value="SOURIGUES">SOURIGUES</option>
+                        <option value="TAPIALES">TAPIALES</option>
+                        <option value="TEMPERLEY">TEMPERLEY</option>
+                        <option value="TRUJUI">TRUJUI</option>
+                        <option value="TIGRE">TIGRE</option>
+                        <option value="UDAONDO">UDAONDO</option>
+                        <option value="VALENTIN ALSINA">VALENTIN ALSINA</option>
+                        <option value="VICENTE LOPEZ">VICENTE LOPEZ</option>
+                        <option value="VILLA ADELINA">VILLA ADELINA</option>
+                        <option value="VILLA BALLESTER">VILLA BALLESTER</option>
+                        <option value="VILLA BOSCH">VILLA BOSCH</option>
+                        <option value="VILLA CENTENARIO">VILLA CENTENARIO</option>
+                        <option value="VILLA DOMINICO">VILLA DOMINICO</option>
+                        <option value="VILLA ESPAÑA">VILLA ESPAÑA</option>
+                        <option value="VILLA FIORITO">VILLA FIORITO</option>
+                        <option value="VILLA LUZURIAGA">VILLA LUZURIAGA</option>
+                        <option value="VILLA MARTELLI">VILLA MARTELLI</option>
+                        <option value="VILLA MADERO">VILLA MADERO</option>
+                        <option value="VILLA ROSA">VILLA ROSA</option>
+                        <option value="VILLA SARMIENTO">VILLA SARMIENTO</option>
+                        <option value="VILLA TESEI">VILLA TESEI</option>
+                        <option value="WILDE">WILDE</option>
+                        <option value="WILLIAM C MORRIS">WILLIAM C MORRIS</option>
+
+                    </select><br>
+
+                    <label for="arrival-location">Destino</label>
+                    <select id="arrival-location" name="arrival-location" required>
+                        <option value=""></option>
+                        <option value="ADROGUE">ADROGUE</option>
+                        <option value="ALDO BONZI">ALDO BONZI</option>
+                        <option value="ARTURO SEGUI">ARTURO SEGUI</option>
+                        <option value="AVELLANEDA">AVELLANEDA</option>
+                        <option value="BANFIELD">BANFIELD</option>
+                        <option value="BECCAR">BECCAR</option>
+                        <option value="BELLA VISTA">BELLA VISTA</option>
+                        <option value="BERAZATEGUI">BERAZATEGUI</option>
+                        <option value="BERNAL">BERNAL</option>
+                        <option value="BOSQUES">BOSQUES</option>
+                        <option value="BOULOGNE SUR MER">BOULOGNE SUR MER</option>
+                        <option value="BURZACO">BURZACO</option>
+                        <option value="CARAPACHAY">CARAPACHAY</option>
+                        <option value="CASCO URBANO">CASCO URBANO</option>
+                        <option value="CASEROS">CASEROS</option>
+                        <option value="CASTELAR">CASTELAR</option>
+                        <option value="CIUDAD EVITA">CIUDAD EVITA</option>
+                        <option value="CIUDADELA">CIUDADELA</option>
+                        <option value="CITY BELL">CITY BELL</option>
+                        <option value="CLAYPOLE">CLAYPOLE</option>
+                        <option value="CABA">CABA</option>
+                        <option value="DEL VISO">DEL VISO</option>
+                        <option value="DON BOSCO">DON BOSCO</option>
+                        <option value="DON ORIONE">DON ORIONE</option>
+                        <option value="DON TORCUATO">DON TORCUATO</option>
+                        <option value="EZPELETA">EZPELETA</option>
+                        <option value="FLORENCIO VARELA">FLORENCIO VARELA</option>
+                        <option value="FLORIDA">FLORIDA</option>
+                        <option value="GARIN">GARIN</option>
+                        <option value="GENERAL PACHECO">GENERAL PACHECO</option>
+                        <option value="GERLI">GERLI</option>
+                        <option value="GONNET">GONNET</option>
+                        <option value="GUTIERREZ">GUTIERREZ</option>
+                        <option value="HAEDO">HAEDO</option>
+                        <option value="HUDSON">HUDSON</option>
+                        <option value="HURLINGHAM">HURLINGHAM</option>
+                        <option value="ISIDRO CASANOVA">ISIDRO CASANOVA</option>
+                        <option value="ITUZANGO">ITUZANGO</option>
+                        <option value="JOSE INGENIEROS">JOSE INGENIEROS</option>
+                        <option value="JOSE MARMOL">JOSE MARMOL</option>
+                        <option value="LA LUCILA">LA LUCILA</option>
+                        <option value="LA TABLADA">LA TABLADA</option>
+                        <option value="LAFERRERE">LAFERRERE</option>
+                        <option value="LANUS">LANUS</option>
+                        <option value="LAVALLOL">LAVALLOL</option>
+                        <option value="LOMA HERMOSA">LOMA HERMOSA</option>
+                        <option value="LOMAS DEL MIRADOR">LOMAS DEL MIRADOR</option>
+                        <option value="LOMAS DE ZAMORA">LOMAS DE ZAMORA</option>
+                        <option value="LONGCHAMPS">LONGCHAMPS</option>
+                        <option value="LIBERTAD">LIBERTAD</option>
+                        <option value="LUIS GUILLON">LUIS GUILLON</option>
+                        <option value="MANUEL ALBERTI">MANUEL ALBERTI</option>
+                        <option value="MARTIN CORONADO">MARTIN CORONADO</option>
+                        <option value="MARTINEZ">MARTINEZ</option>
+                        <option value="MERLO">MERLO</option>
+                        <option value="MORENO">MORENO</option>
+                        <option value="MORON">MORON</option>
+                        <option value="MUNRO">MUNRO</option>
+                        <option value="PABLO PODESTA">PABLO PODESTA</option>
+                        <option value="PIÑEYRO">PIÑEYRO</option>
+                        <option value="PLATANOS">PLATANOS</option>
+                        <option value="RAFAEL CALZADA">RAFAEL CALZADA</option>
+                        <option value="RAFAEL CASTILLO">RAFAEL CASTILLO</option>
+                        <option value="RANELAGH">RANELAGH</option>
+                        <option value="RAMOS MEJIA">RAMOS MEJIA</option>
+                        <option value="REMEDIOS DE ESCALADA">REMEDIOS DE ESCALADA</option>
+                        <option value="RINCON DE MILBERG">RINCON DE MILBERG</option>
+                        <option value="SAN FERNANDO">SAN FERNANDO</option>
+                        <option value="SAN ISIDRO">SAN ISIDRO</option>
+                        <option value="SAN JOSE">SAN JOSE</option>
+                        <option value="SAN JUSTO">SAN JUSTO</option>
+                        <option value="SAN MARTIN">SAN MARTIN</option>
+                        <option value="SAN MIGUEL">SAN MIGUEL</option>
+                        <option value="SARANDI">SARANDI</option>
+                        <option value="SANTOS LUGARES">SANTOS LUGARES</option>
+                        <option value="SOLANO">SOLANO</option>
+                        <option value="SOURIGUES">SOURIGUES</option>
+                        <option value="TAPIALES">TAPIALES</option>
+                        <option value="TEMPERLEY">TEMPERLEY</option>
+                        <option value="TRUJUI">TRUJUI</option>
+                        <option value="TIGRE">TIGRE</option>
+                        <option value="UDAONDO">UDAONDO</option>
+                        <option value="VALENTIN ALSINA">VALENTIN ALSINA</option>
+                        <option value="VICENTE LOPEZ">VICENTE LOPEZ</option>
+                        <option value="VILLA ADELINA">VILLA ADELINA</option>
+                        <option value="VILLA BALLESTER">VILLA BALLESTER</option>
+                        <option value="VILLA BOSCH">VILLA BOSCH</option>
+                        <option value="VILLA CENTENARIO">VILLA CENTENARIO</option>
+                        <option value="VILLA DOMINICO">VILLA DOMINICO</option>
+                        <option value="VILLA ESPAÑA">VILLA ESPAÑA</option>
+                        <option value="VILLA FIORITO">VILLA FIORITO</option>
+                        <option value="VILLA LUZURIAGA">VILLA LUZURIAGA</option>
+                        <option value="VILLA MARTELLI">VILLA MARTELLI</option>
+                        <option value="VILLA MADERO">VILLA MADERO</option>
+                        <option value="VILLA ROSA">VILLA ROSA</option>
+                        <option value="VILLA SARMIENTO">VILLA SARMIENTO</option>
+                        <option value="VILLA TESEI">VILLA TESEI</option>
+                        <option value="WILDE">WILDE</option>
+                        <option value="WILLIAM C MORRIS">WILLIAM C MORRIS</option>
+
+                    </select><br>
+
+                    <div class="form-row">
+                        <div class="form-row">
+                            <label for="length">Largo (cm):</label>
+                            <input type="number" id="length" name="length" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="width">Ancho (cm):</label>
+                            <input type="number" id="width" name="width" required>
+                        </div>
+
+                        <div class="form-row">
+                            <label for="height">Altura (cm):</label>
+                            <input type="number" id="height" name="height" required>
+                        </div>
+                    </div>
+
                     <label for="weight">Peso (kg):</label>
                     <input type="number" id="weight" name="weight" required><br>
 
@@ -35,19 +287,41 @@
                         <option value="24h">24 horas</option>
                         <option value="72h">72 horas</option>
                         <option value="5d">5 días</option>
-                    </select>
-                    
+                    </select><br>
+
                     <button type="button" onclick="calculateShipping()">Calcular Costo</button>
                 </form>
                 <p id="result"></p>
             </section>
         </div>
-        
+</section>
+
+
     </main>
-    
-    <footer>
-        
+
+
+    <footer id="footer" class="footer">
+        <div class="footer-content">
+
+            <h2>Trabaja con nosotros</h2>
+            <div class="social-media">
+                <a href="https://www.instagram.com/cl.logistica/" target="_blank" class="social-link">
+                    <i class="fa-brands fa-instagram fa-spin" style="color: #74C0FC;"></i>
+                </a>
+                <a href="https://linktr.ee/cl.logistica" target="_blank" class="social-link">
+                    <i class="fa-brands fa-whatsapp fa-spin" style="color: #74C0FC;"></i>
+                </a>
+            </div>
+            <div class="contact-info">
+                <p>Teléfono: <a href="https://linktr.ee/cl.logistica" class="phone-number">11 7361-0832</a></p>
+            </div>
+        </div>
     </footer>
+
 </body>
 <script src="script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
 </html>
