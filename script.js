@@ -87,13 +87,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Calcular el factor de volumen
-        const volumeFactor = totalVolume / volumeLimit;
+        const volumeFactor = totalVolume > volumeLimit ? totalVolume / volumeLimit : 1;
 
         // Determinar el factor de peso (solo si el peso total supera el umbral)
         const weightFactor = totalWeight > weightThreshold ? totalWeight / weightThreshold : 1;
 
-        // Si el peso no supera el umbral, usar solo el factor de volumen
-        const combinedFactor = totalWeight > weightThreshold ? (volumeFactor + weightFactor) : volumeFactor;
+        // Si ningún factor supera sus límites, usar solo la tarifa base
+        const combinedFactor = (totalVolume <= volumeLimit && totalWeight <= weightThreshold) ? 1 : Math.max(volumeFactor, weightFactor);
 
         // Obtener la tarifa base para el tiempo de entrega seleccionado
         const baseRate = deliveryRates[deliveryTime];
@@ -108,6 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('result').innerText = `El costo total de envío es: $${totalCost.toFixed(1)}`;
     };
 });
+
 
 
 
