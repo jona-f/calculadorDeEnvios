@@ -53,18 +53,40 @@
     justify-content: center;
 }
 
+.sobrenosotros {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/amarillo.jpg'); /* Degradado negro semitransparente sobre la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir el área del fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding: 20px; /* Espacio interior, opcional */
+}
+
+/* Fondo para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .sobrenosotros {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./img/pedido.jpg'); /* Imagen alternativa para pantallas muy pequeñas */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 5px; /* Ajusta el padding si es necesario */
+    }
+}
+
 .presentacion ul {
+    color: white;
     list-style-type: none;
     font-size: 25px;
     padding: 25px;
 }
 
 .consejos h3 {
+    color: lightblue;
     display: flex;
     justify-content: center;
 }
 
 .lista ul {
+    color: white;
     list-style-type: none;
     font-size: 25px;
     padding: 20px;
@@ -74,6 +96,7 @@
 .paquete {
     max-height: 260px;
     max-width: 500px;
+    border-radius: 10px;
 }
 
 .lista {
@@ -118,7 +141,9 @@ h1 {
 
 /* Sección del formulario */
 #shipping-section {
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 /* Etiquetas y campos del formulario */
@@ -220,6 +245,78 @@ button:active {
     font-weight: bold;
 }
 
+/* servicios */
+
+.titulo2 {
+    display: flex;
+    justify-content: center;
+}
+
+.tituloServicios {
+    font-size: 45px;
+    padding: 10px;
+    font-family: 'lucida sans';
+}
+
+.servicios {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.servicio img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    max-width: 550px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la relación de aspecto de la imagen */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.servicio p {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-top: 10px; /* Espacio superior del texto */
+}
+
+/* Para pantallas medianas (tablets en modo vertical) */
+@media (max-width: 1024px) {
+    .servicio {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas */
+    }
+}
+
+/* Para pantallas pequeñas (móviles en modo vertical) */
+@media (max-width: 768px) {
+    .servicios {
+        flex-direction: column; /* Cambia la disposición a una sola columna */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .servicio {
+        flex: 1 1 100%; /* Una columna */
+        margin: 10px 0; /* Espacio vertical entre servicios */
+    }
+
+    .servicio img {
+        max-width: 90%; /* Ajusta el tamaño de la imagen para pantallas pequeñas */
+    }
+
+    .servicio p {
+        font-size: 28px; /* Ajusta el tamaño del texto */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles en modo vertical muy pequeños) */
+@media (max-width: 480px) {
+    .servicio img {
+        width: 350px;
+        max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
+    }
+
+    .servicio p {
+        font-size: 24px; /* Ajusta aún más el tamaño del texto */
+    }
+}
 
 /* General Footer Styles */
 .footer {
@@ -229,6 +326,15 @@ button:active {
     text-align: center;
 }
 
+.logofooter {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.logofooter img {
+    max-width: 200px;
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -236,7 +342,7 @@ button:active {
 
 }
 
-h2 {
+h3 {
     font-size: 35px;
     font-family: Cambria;
 }
@@ -269,7 +375,6 @@ h2 {
     }
 
     .social-media {
-        flex-direction: column;
         align-items: center;
     }
 
