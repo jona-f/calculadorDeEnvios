@@ -146,6 +146,12 @@ h1 {
     margin: 20px;
 }
 
+@media (max-width: 480px) {
+    #package-forms {
+        max-width: 274px;
+    }
+}
+
 /* Etiquetas y campos del formulario */
 
 #shipping-form {
@@ -309,7 +315,7 @@ button:active {
 /* Para pantallas muy pequeñas (móviles en modo vertical muy pequeños) */
 @media (max-width: 480px) {
     .servicio img {
-        width: 350px;
+        
         max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
     }
 
